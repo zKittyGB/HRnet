@@ -1,0 +1,11 @@
+.date_picker {
+    width: 250px;
+    height: 20px;
+}
+
+@media (max-width: 1100px) { 
+    .date_picker {
+        max-width: 150px;
+        height: 20px;
+    }
+}
