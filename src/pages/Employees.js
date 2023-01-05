@@ -4,7 +4,7 @@ import Footer from "../components/footer/Footer";
 
 export default function Employees() {
   return (
-    <div>
+    <div className="employees_body">
       <MenuTop />
       <BodyEmployees />
       <Footer />
