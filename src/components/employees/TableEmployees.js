@@ -21,7 +21,7 @@ import Switch from "@mui/material/Switch";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
-
+import { useSelector } from "react-redux";
 function createData(
   firstName,
   lastName,
@@ -45,31 +45,10 @@ function createData(
     zipCode,
   };
 }
-
-const rows = [
-  createData(
-    "Axel",
-    "Hébert",
-    "01 - 01 - 2023",
-    "sales",
-    "29 - 06 - 1990",
-    "rue de port la blanche",
-    "Nantes",
-    "Loire Atlantique",
-    44300
-  ),
-  createData(
-    "Leopoldine",
-    "Tasoeur",
-    "01 - 07 - 2021",
-    "sales",
-    "02 - 01 - 1980",
-    "rue de la blanche port",
-    "PasNantes",
-    "PasLoire Atlantique",
-    44300
-  ),
-];
+function Rows() {
+  const pwet = useSelector((state) => state.emmployees);
+}
+export let rows;
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -287,6 +266,9 @@ export default function EnhancedTable() {
   const [page, setPage] = React.useState(0);
   const [dense, setDense] = React.useState(false);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  rows = useSelector((state) => state.employees);
+  const row = useSelector((state) => state);
+  console.log(row);
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === "asc";

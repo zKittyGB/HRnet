@@ -1,6 +1,10 @@
 import { createStore } from "redux";
 
 const initialState = {
+  firstNameValidate: false,
+  lastNameValidate: false,
+  streetValidate: false,
+  cityValidate: false,
   firstName: "",
   lastName: "",
   birth: "",
@@ -10,8 +14,54 @@ const initialState = {
   state: "",
   zipCode: "",
   department: "",
+  employees: [
+    {
+      city: "Nantes",
+      dateOfBirth: "Jan-19-2023",
+      department: "sales",
+      firstName: "Axel",
+      lastName: "Hébert",
+      startDate: "01 - 01 - 2023",
+      state: "Loire Atlantique",
+      street: "rue de port la blanche",
+      zipCode: "44300",
+    },
+    {
+      city: "Nantes",
+      dateOfBirth: "Jan-19-2023",
+      department: "sales",
+      firstName: "Alex",
+      lastName: "Hébert",
+      startDate: "01 - 01 - 2023",
+      state: "Loire Atlantique",
+      street: "rue de port la blanche",
+      zipCode: "44300",
+    },
+  ],
 };
 
+export const setFirstNameValidateAction = { type: "setFirstNameValidate" };
+export const setFirstNameNoValidateAction = { type: "setFirstNameNoValidate" };
+export const setLastNameValidateAction = { type: "setLastNameValidate" };
+export const setLastNameNoValidateAction = { type: "setLastNameNoValidate" };
+export const setStreetValidateAction = { type: "setStreetValidate" };
+export const setStreetNoValidateAction = { type: "setStreetNoValidate" };
+export const setCityValidateAction = { type: "setCityValidate" };
+export const setCityNoValidateAction = { type: "setCityNoValidate" };
+export const setFormValidate = {
+  type: "setFormValidate",
+  payload: {
+    firstName: "",
+    lastName: "",
+    birth: "",
+    dateStart: "",
+    street: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    department: "",
+  },
+};
 export const setFirstNameAction = { type: "setFirstName" };
 export const setLastNameAction = { type: "setLastName" };
 export const setBirthAction = {
@@ -32,6 +82,62 @@ export const setDepartmentAction = {
 };
 
 function reducer(state = initialState, action) {
+  if (action.type === "setFirstNameValidate") {
+    return {
+      ...state,
+      firstNameValidate: "",
+    };
+  }
+  if (action.type === "setFirstNameNoValidate") {
+    return {
+      ...state,
+      firstNameValidate: "error",
+    };
+  }
+  if (action.type === "setLastNameValidate") {
+    return {
+      ...state,
+      lastNameValidate: "",
+    };
+  }
+  if (action.type === "setLastNameNoValidate") {
+    return {
+      ...state,
+      lastNameValidate: "error",
+    };
+  }
+  if (action.type === "setStreetValidate") {
+    return {
+      ...state,
+      streetValidate: "",
+    };
+  }
+  if (action.type === "setStreetNoValidate") {
+    return {
+      ...state,
+      streetValidate: "error",
+    };
+  }
+  if (action.type === "setCityValidate") {
+    return {
+      ...state,
+      cityValidate: "",
+    };
+  }
+  if (action.type === "setCityNoValidate") {
+    return {
+      ...state,
+      cityValidate: "error",
+    };
+  }
+  if (action.type === "setFormValidate") {
+    const newArray = [...state.employees];
+    newArray.push(action.payload.option);
+    return {
+      ...state,
+      employees: newArray,
+    };
+  }
   if (action.type === "setFirstName") {
     return {
       ...state,
@@ -71,7 +177,7 @@ function reducer(state = initialState, action) {
   if (action.type === "setState") {
     return {
       ...state,
-      state: document.getElementById("state").value,
+      state: action.payload.option,
     };
   }
   if (action.type === "setZipCode") {
