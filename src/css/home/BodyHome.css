@@ -64,7 +64,10 @@
     height: 20px;
     margin-bottom: 0px;
 }
-
+.Birth, .DateStart {
+    border:1px;
+    border-radius: 4px;
+}
 #street, #city {
     height:20px;
     width: 350px;
@@ -74,8 +77,10 @@
     height :30px;
 }
 #zip-code{
-    width:340px;
-    height:25px;
+    width:345px;
+    height:35px;
+    border:1px;
+    border-radius: 4px;
 }
 
 .dateArea, .stateArea, .zipCodeArea, .departmentArea{

@@ -1,5 +1,5 @@
 import React from "react";
-import logoCreateEmployee from "../../assets/logo_create_employee.png";
+import logoCreateEmployee from "../../../assets/logo_create_employee.png";
 
 export default function HomeBodySectionPicture() {
   return (

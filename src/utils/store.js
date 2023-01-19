@@ -5,6 +5,7 @@ const initialState = {
   lastNameValidate: false,
   streetValidate: false,
   cityValidate: false,
+  formValidate: true,
   firstName: "",
   lastName: "",
   birth: "",
@@ -62,6 +63,8 @@ export const setFormValidate = {
     department: "",
   },
 };
+export const setOpenModalAction = { type: "setOpenModal" };
+export const setCloseModalAction = { type: "setCloseModal" };
 export const setFirstNameAction = { type: "setFirstName" };
 export const setLastNameAction = { type: "setLastName" };
 export const setBirthAction = {
@@ -138,16 +141,32 @@ function reducer(state = initialState, action) {
       employees: newArray,
     };
   }
+  if (action.type === "setOpenModal") {
+    return {
+      ...state,
+      formValidate: true,
+    };
+  }
+  if (action.type === "setCloseModal") {
+    return {
+      ...state,
+      formValidate: false,
+    };
+  }
   if (action.type === "setFirstName") {
     return {
       ...state,
-      firstName: document.getElementById("first-name").value,
+      firstName:
+        document.getElementById("first-name").value[0].toUpperCase() +
+        document.getElementById("first-name").value.slice(1),
     };
   }
   if (action.type === "setLastName") {
     return {
       ...state,
-      lastName: document.getElementById("last-name").value,
+      lastName:
+        document.getElementById("last-name").value[0].toUpperCase() +
+        document.getElementById("last-name").value.slice(1),
     };
   }
   if (action.type === "setBirth") {
@@ -165,13 +184,17 @@ function reducer(state = initialState, action) {
   if (action.type === "setStreet") {
     return {
       ...state,
-      street: document.getElementById("street").value,
+      street:
+        document.getElementById("street").value[0].toUpperCase() +
+        document.getElementById("street").value.slice(1),
     };
   }
   if (action.type === "setCity") {
     return {
       ...state,
-      city: document.getElementById("city").value,
+      city:
+        document.getElementById("city").value[0].toUpperCase() +
+        document.getElementById("city").value.slice(1),
     };
   }
   if (action.type === "setState") {

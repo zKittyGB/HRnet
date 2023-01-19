@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import ValidationTextFields from "./BodySectionForm/BodyInput.js";
-import SaveButton from "./BodySectionForm/SaveButton";
-import SelectDepartment from "./BodySectionForm/SelectDepartment";
-import SelectState from "./BodySectionForm/BodySelectState";
-import DatePicker from "./BodySectionForm/DatePickerHome";
-import InputZipCode from "./BodySectionForm/BodyInputZipCode";
+import ValidationTextFields from "./components/BodyInput.js";
+import SaveButton from "./components/SaveButton";
+import SelectDepartment from "./components/SelectDepartment";
+import SelectState from "./components/BodySelectState";
+import DatePicker from "./components/DatePickerHome";
+import InputZipCode from "./components/BodyInputZipCode";
 import { useSelector } from "react-redux";
 
 export default function HomeBodySectionForm() {

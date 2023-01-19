@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-datepicker/dist/react-datepicker-cssmodules.css";
-import "../../../css/home/DatePickerMod.css";
+import "../../../../css/home/DatePickerMod.css";
 import { useDispatch } from "react-redux";
 
 export default function DatePickerMod(props) {

@@ -91,7 +91,6 @@ export default function SaveButton(rows) {
       lastName.length >= 3 &&
       firstName.length >= 3
     ) {
-      console.log("bravo");
       dispatch({
         type: "setFormValidate",
         payload: {
@@ -107,9 +106,8 @@ export default function SaveButton(rows) {
             zipCode: zipCode,
           },
         },
+        type: "setOpenModal",
       });
-    } else {
-      console.log("raté");
     }
   }
   return (

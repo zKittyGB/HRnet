@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { statesList } from "../../../utils/states.js";
+import { statesList } from "../../../../utils/states.js";
 import Select from "react-select";
 
 export default function SelectState() {
