@@ -1,9 +1,11 @@
 import "../../css/home/BodyHome.css";
 import BodyHomeSectionForm from "./bodySectionForm/BodyHomeSectionForm.js";
 import BodySectionPicture from "./bodySectionPicture/BodySectionPicture";
-import ModalFormValidate from "./modalFormValidate/ModalFormValidate";
-import { useSelector } from "react-redux";
+import { ModalFormValidate } from "modale_form_validate_component";
+import { useSelector, useDispatch } from "react-redux";
+
 export default function BodyHome() {
+  const dispatch = useDispatch();
   const firstName = useSelector((state) => state.firstName);
   const lastName = useSelector((state) => state.lastName);
   const birth = useSelector((state) => state.birth);
@@ -25,11 +27,18 @@ export default function BodyHome() {
     zipCode: zipCode,
     department: department,
   };
+  function closeModal() {
+    dispatch({ type: "setCloseModal" });
+  }
   return (
     <div className="home_body">
       <BodySectionPicture />
       <BodyHomeSectionForm />
-      <ModalFormValidate isModalOpen={isModalOpen} userinfo={modalData} />
+      <ModalFormValidate
+        isModalOpen={isModalOpen}
+        userinfo={modalData}
+        closeModal={closeModal}
+      />
     </div>
   );
 }

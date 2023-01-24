@@ -5,7 +5,7 @@ const initialState = {
   lastNameValidate: false,
   streetValidate: false,
   cityValidate: false,
-  formValidate: true,
+  formValidate: false,
   firstName: "",
   lastName: "",
   birth: "",
