@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ValidationTextFields from "./components/BodyInput.js";
 import SaveButton from "./components/SaveButton";
 import SelectDepartment from "./components/SelectDepartment";

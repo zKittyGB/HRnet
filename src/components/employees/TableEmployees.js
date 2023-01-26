@@ -22,32 +22,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 import { useSelector } from "react-redux";
-function createData(
-  firstName,
-  lastName,
-  startDate,
-  department,
-  dateOfBirth,
-  street,
-  city,
-  state,
-  zipCode
-) {
-  return {
-    firstName,
-    lastName,
-    startDate,
-    department,
-    dateOfBirth,
-    street,
-    city,
-    state,
-    zipCode,
-  };
-}
-function Rows() {
-  const pwet = useSelector((state) => state.emmployees);
-}
 export let rows;
 
 function descendingComparator(a, b, orderBy) {

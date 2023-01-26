@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-export let rows;
-export default function SaveButton(rows) {
+export default function SaveButton() {
   const firstName = useSelector((state) => state.firstName);
   const lastName = useSelector((state) => state.lastName);
   const birth = useSelector((state) => state.birth);
@@ -106,6 +105,8 @@ export default function SaveButton(rows) {
             zipCode: zipCode,
           },
         },
+      });
+      dispatch({
         type: "setOpenModal",
       });
     }
