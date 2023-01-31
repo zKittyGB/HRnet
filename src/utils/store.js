@@ -136,7 +136,6 @@ function reducer(state = initialState, action) {
   if (action.type === "setFormValidate") {
     const newArray = [...state.employees];
     newArray.push(action.payload.option);
-    console.log("hello", newArray);
     return {
       ...state,
       employees: newArray,

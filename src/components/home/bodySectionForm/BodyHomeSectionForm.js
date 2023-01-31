@@ -18,21 +18,21 @@ export default function HomeBodySectionForm() {
       <form action="#" id="create-employee">
         {/*first name input */}
         <ValidationTextFields
-          firstName={"First Name"}
+          inputLabel={"First Name"}
           inputId={"first-name"}
-          setFirstName={"setFirstName"}
+          setAction={"setFirstName"}
           error={firstNameValidate}
         />
         {/*last name input */}
         <ValidationTextFields
-          lastName={"Last Name"}
+          inputLabel={"Last Name"}
           inputId={"last-name"}
-          setFirstName={"setLastName"}
+          setAction={"setLastName"}
           error={lastNameValidate}
         />
         {/*BirthDay input */}
         <DatePicker
-          birth={"Birth"}
+          classValue={"Birth"}
           id={"date-of-birth"}
           title={"Date of birth"}
           error={"date-of-birth-error"}
@@ -40,7 +40,7 @@ export default function HomeBodySectionForm() {
         />
         {/*StartDate input */}
         <DatePicker
-          birth={"DateStart"}
+          classValue={"DateStart"}
           id={"date-of-birth"}
           title={"Start Date"}
           error={"start-date-error"}
@@ -52,16 +52,16 @@ export default function HomeBodySectionForm() {
 
           {/*Street input */}
           <ValidationTextFields
-            lastName={"Street"}
+            inputLabel={"Street"}
             inputId={"street"}
-            setFirstName={"setStreet"}
+            setAction={"setStreet"}
             error={streetValidate}
           />
           {/*City input */}
           <ValidationTextFields
-            lastName={"City"}
+            inputLabel={"City"}
             inputId={"city"}
-            setFirstName={"setCity"}
+            setAction={"setCity"}
             error={cityValidate}
           />
           <SelectState />
