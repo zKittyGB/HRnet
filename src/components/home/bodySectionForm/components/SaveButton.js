@@ -83,7 +83,7 @@ export default function SaveButton() {
     if (
       department !== "" &&
       zipCode.length >= 5 &&
-      city.length >= 5 &&
+      city.length >= 3 &&
       street.length >= 3 &&
       dateStart !== "" &&
       birth !== "" &&
