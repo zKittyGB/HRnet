@@ -13,7 +13,6 @@ export default function BodyHome() {
   const dateStart = useSelector((state) => state.dateStart);
   const street = useSelector((state) => state.street);
   const city = useSelector((state) => state.city);
-  const state = useSelector((state) => state.state);
   const zipCode = useSelector((state) => state.zipCode);
   const department = useSelector((state) => state.department);
   const isModalClose = useSelector((state) => state.formValidate);
