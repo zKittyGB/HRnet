@@ -1,6 +1,7 @@
 # Project #14 - "HRnet"
 
-This project is the last of my Javascript trainee. 
+This project is the last of my Javascript process. 
+
 It consisted in transforming a web application made in full jQuery by an application in full react. In addition, one of the instructions asked to convert one of the modules into an NPM library. 
 
 ## 1: Installation
