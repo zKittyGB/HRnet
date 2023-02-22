@@ -6,7 +6,7 @@ It consisted in transforming a web application made in full jQuery by an applica
 
 ## 1: Installation
 
-Project uses npm as package manager and NodeJs,1
+Project uses npm as package manager and NodeJs
 
 #1 - Install NodeJs
 
