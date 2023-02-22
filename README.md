@@ -5,10 +5,15 @@ It consisted in transforming a web application made in full jQuery by an applica
 
 ## 1: Installation
 
-Project uses npm as package manager and NodeJs,
+Project uses npm as package manager and NodeJs,1
+
 #1 - Install NodeJs
+
 #2 - Install npm
+
 #3 - Clone or Download the project APP
+
 #4 - Open App folder then install all dependencies required with npm install
+
 #5 - Start it with npm start and accept to start him on http://localhost:3000
     
